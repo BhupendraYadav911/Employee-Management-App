@@ -1,27 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import EmpListing from './EmpListing';
-import EmpCreate from './EmpCreate';
-import EmpDetail from './EmpDetail';
-import EmpEdit from './EmpEdit';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar'
+import EmpListing from './Components/EmpListing/EmpListing';
+import EmpCreate from './Components/EmpCreate/EmpCreate';
+import EmpDetail from './Components/EmpDetail/EmpDetail';
+import EmpEdit from './Components/EmpEdit/EmpEdit';
+import EmpDelete from './Components/EmpDelete/EmpDelete';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>React JS CRUD Opertations</h1>
-      <BrowserRouter>
+      <Navbar />
+      <div className="container">
+      
+      <Router>
         <Routes>
-          <Route path='/' element={<EmpListing />}></Route>
-          <Route path='/employee/create' element={<EmpCreate />}></Route>
-
-          <Route path='/employee/detail/:empid' element={<EmpDetail />}></Route>
-          <Route path='/employee/edit/:empid' element={<EmpEdit />}></Route>
+          <Route path="/" element={<EmpListing />} />
+          <Route path="/employee/create" element={<EmpCreate />} />
+          <Route path="/employee/detail/:empid" element={<EmpDetail />} />
+          <Route path="/employee/edit/:empid" element={<EmpEdit />} />
+          <Route path="/employee/delete/:empid" element={<EmpDelete />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
+      </div>
     </div>
   );
-
 }
 
 export default App;

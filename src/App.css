@@ -1,3 +1,58 @@
+/* App.css */
+
+/* Reset default margin and padding for body and HTML */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color to the entire body */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Style the navbar */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 20px; /* Add margin at the bottom of the navbar */
+}
+
+/* Center the navbar content and make it full width */
+.navbar-expand-lg .navbar-nav {
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+}
+
+/* Add some padding to the navbar links */
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+}
+
+/* Style the active link */
+.navbar-nav .nav-item.active .nav-link {
+  color: #007bff;
+}
+
+/* Center the logo or brand */
+.navbar-brand {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Center the toggle button on smaller screens */
+.navbar-toggler {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Adjust the toggle button's appearance */
+.navbar-toggler-icon {
+  background-color: #007bff;
+}
+
+/* Rest of your existing styles */
 .App {
   text-align: center;
 }
@@ -5,11 +60,14 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
 }
-.btn{
-  margin: 2px;;
+
+.btn {
+  margin: 2px;
 }
-.divbtn{
+
+.divbtn {
   float: left;
 }
 
